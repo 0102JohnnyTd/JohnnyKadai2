@@ -16,36 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="0fy-1L-aoh">
-                                <rect key="frame" x="16" y="124" width="382" height="378"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0fy-1L-aoh">
+                                <rect key="frame" x="16" y="124" width="382" height="212"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5A-F0-WYW" userLabel="Fitst Value Text Field">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ecQ-04-Jdz"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5A-F0-WYW" userLabel="Fitst Value Text Field">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-QK-Zvv" userLabel="Second Value Text Field">
-                                        <rect key="frame" x="0.0" y="82" width="382" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-QK-Zvv" userLabel="Second Value Text Field">
+                                        <rect key="frame" x="0.0" y="58" width="382" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MOR-W3-uq1">
-                                        <rect key="frame" x="0.0" y="164" width="382" height="51"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <segments>
-                                            <segment title="+"/>
-                                            <segment title="-"/>
-                                            <segment title="×"/>
-                                            <segment title="÷"/>
-                                        </segments>
-                                        <color key="tintColor" systemColor="tintColor"/>
-                                        <color key="selectedSegmentTintColor" systemColor="tintColor"/>
-                                    </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-SQ-MC0">
-                                        <rect key="frame" x="0.0" y="246" width="382" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-SQ-MC0">
+                                        <rect key="frame" x="0.0" y="116" width="382" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Caluclate Button">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -54,8 +39,8 @@
                                             <action selector="caluclateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6c-BU-xxi"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculation Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36A-hb-Ytw">
-                                        <rect key="frame" x="0.0" y="328" width="382" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Calculation Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36A-hb-Ytw">
+                                        <rect key="frame" x="0.0" y="174" width="382" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -75,7 +60,6 @@
                         <outlet property="caluculationResultLabel" destination="36A-hb-Ytw" id="zd7-La-LZf"/>
                         <outlet property="firstValueTextField" destination="W5A-F0-WYW" id="vRm-dO-RMg"/>
                         <outlet property="secondValueTextField" destination="iBc-QK-Zvv" id="ZU1-9l-qFJ"/>
-                        <outlet property="segmentedControl" destination="MOR-W3-uq1" id="o25-m5-xQ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -84,14 +68,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
