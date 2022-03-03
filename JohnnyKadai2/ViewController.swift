@@ -12,13 +12,17 @@ final class ViewController: UIViewController {
 
     @IBOutlet private weak var secondValueTextField: UITextField!
 
-    @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
 
+    
+    @IBAction func valueChanged(_ sender: Any) {
+    }
+    
     @IBAction private func caluclateButton(_ sender: Any) {
         let textFieldArray: [UITextField] = [firstValueTextField,secondValueTextField]
 
         let result = textFieldArray
-            .map { $0.text ?? "" }
+                .map { $0.text ?? "" }
             .map { Int($0) ?? 0 }
     }
     
