@@ -54,7 +54,7 @@
                                             <action selector="caluclateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6c-BU-xxi"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Calculation Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36A-hb-Ytw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Calculation Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36A-hb-Ytw">
                                         <rect key="frame" x="0.0" y="232" width="382" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -72,7 +72,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="caluculationResultLabel" destination="36A-hb-Ytw" id="zd7-La-LZf"/>
+                        <outlet property="calculationResultLabel" destination="36A-hb-Ytw" id="RgO-ue-5cf"/>
                         <outlet property="firstValueTextField" destination="W5A-F0-WYW" id="vRm-dO-RMg"/>
                         <outlet property="secondValueTextField" destination="iBc-QK-Zvv" id="ZU1-9l-qFJ"/>
                         <outlet property="segmentedControl" destination="B5F-td-KFf" id="fWc-qb-J85"/>
