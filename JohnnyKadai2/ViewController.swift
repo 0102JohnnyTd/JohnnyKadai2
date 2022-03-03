@@ -62,15 +62,8 @@ final class ViewController: UIViewController {
             calculationResultLabel.text = String(firstValue / secondValue)
         }
     }
-
-
     
     @IBOutlet private weak var calculationResultLabel: UILabel!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 }
 
 extension UITextField {
