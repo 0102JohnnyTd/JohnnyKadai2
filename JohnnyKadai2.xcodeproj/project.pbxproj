@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C724A4027D17ED00034C8AA /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C724A3F27D17ED00034C8AA /* UITextField.swift */; };
 		1C79BB5727CF703E00AF5DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C79BB5627CF703E00AF5DBA /* AppDelegate.swift */; };
 		1C79BB5927CF703E00AF5DBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C79BB5827CF703E00AF5DBA /* SceneDelegate.swift */; };
 		1C79BB5B27CF703E00AF5DBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C79BB5A27CF703E00AF5DBA /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C724A3F27D17ED00034C8AA /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		1C79BB5327CF703E00AF5DBA /* JohnnyKadai2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JohnnyKadai2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C79BB5627CF703E00AF5DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C79BB5827CF703E00AF5DBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				1C79BB5627CF703E00AF5DBA /* AppDelegate.swift */,
 				1C79BB5827CF703E00AF5DBA /* SceneDelegate.swift */,
 				1C79BB5A27CF703E00AF5DBA /* ViewController.swift */,
+				1C724A3F27D17ED00034C8AA /* UITextField.swift */,
 				1C79BB5C27CF703E00AF5DBA /* Main.storyboard */,
 				1C79BB5F27CF704100AF5DBA /* Assets.xcassets */,
 				1C79BB6127CF704100AF5DBA /* LaunchScreen.storyboard */,
@@ -162,6 +165,7 @@
 				1C79BB5B27CF703E00AF5DBA /* ViewController.swift in Sources */,
 				1C79BB5727CF703E00AF5DBA /* AppDelegate.swift in Sources */,
 				1C79BB5927CF703E00AF5DBA /* SceneDelegate.swift in Sources */,
+				1C724A4027D17ED00034C8AA /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
