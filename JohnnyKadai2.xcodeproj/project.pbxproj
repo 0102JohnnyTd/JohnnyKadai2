@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C724A4027D17ED00034C8AA /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C724A3F27D17ED00034C8AA /* UITextField.swift */; };
+		1C724A4027D17ED00034C8AA /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C724A3F27D17ED00034C8AA /* UITextField+.swift */; };
+		1C724A4527D1A8B10034C8AA /* OverflowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C724A4427D1A8B10034C8AA /* OverflowError.swift */; };
+		1C724A4727D1A9360034C8AA /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C724A4627D1A9360034C8AA /* Int+.swift */; };
 		1C79BB5727CF703E00AF5DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C79BB5627CF703E00AF5DBA /* AppDelegate.swift */; };
 		1C79BB5927CF703E00AF5DBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C79BB5827CF703E00AF5DBA /* SceneDelegate.swift */; };
 		1C79BB5B27CF703E00AF5DBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C79BB5A27CF703E00AF5DBA /* ViewController.swift */; };
@@ -17,7 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C724A3F27D17ED00034C8AA /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		1C724A3F27D17ED00034C8AA /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		1C724A4427D1A8B10034C8AA /* OverflowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverflowError.swift; sourceTree = "<group>"; };
+		1C724A4627D1A9360034C8AA /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		1C79BB5327CF703E00AF5DBA /* JohnnyKadai2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JohnnyKadai2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C79BB5627CF703E00AF5DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C79BB5827CF703E00AF5DBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C724A4827D1B09D0034C8AA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1C724A3F27D17ED00034C8AA /* UITextField+.swift */,
+				1C724A4627D1A9360034C8AA /* Int+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1C724A4927D1F0F00034C8AA /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				1C724A4427D1A8B10034C8AA /* OverflowError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		1C79BB4A27CF703E00AF5DBA = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +81,10 @@
 			children = (
 				1C79BB5627CF703E00AF5DBA /* AppDelegate.swift */,
 				1C79BB5827CF703E00AF5DBA /* SceneDelegate.swift */,
-				1C79BB5A27CF703E00AF5DBA /* ViewController.swift */,
-				1C724A3F27D17ED00034C8AA /* UITextField.swift */,
+				1C724A4827D1B09D0034C8AA /* Extension */,
+				1C724A4927D1F0F00034C8AA /* Error */,
 				1C79BB5C27CF703E00AF5DBA /* Main.storyboard */,
+				1C79BB5A27CF703E00AF5DBA /* ViewController.swift */,
 				1C79BB5F27CF704100AF5DBA /* Assets.xcassets */,
 				1C79BB6127CF704100AF5DBA /* LaunchScreen.storyboard */,
 				1C79BB6427CF704100AF5DBA /* Info.plist */,
@@ -165,7 +187,9 @@
 				1C79BB5B27CF703E00AF5DBA /* ViewController.swift in Sources */,
 				1C79BB5727CF703E00AF5DBA /* AppDelegate.swift in Sources */,
 				1C79BB5927CF703E00AF5DBA /* SceneDelegate.swift in Sources */,
-				1C724A4027D17ED00034C8AA /* UITextField.swift in Sources */,
+				1C724A4727D1A9360034C8AA /* Int+.swift in Sources */,
+				1C724A4527D1A8B10034C8AA /* OverflowError.swift in Sources */,
+				1C724A4027D17ED00034C8AA /* UITextField+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
