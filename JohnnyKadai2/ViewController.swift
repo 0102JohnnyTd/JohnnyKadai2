@@ -22,13 +22,14 @@ final class ViewController: UIViewController {
         let secondValue = secondValueTextField.textToFloat
 
         if segmentedControl.selectedSegmentIndex == 0 {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCaluclation: .addition, firstValue: firstValue, secondValue: secondValue)
+            // UILabelにfetchCalculation
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .addition, firstValue: firstValue, secondValue: secondValue)
         } else if segmentedControl.selectedSegmentIndex == 1 {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCaluclation: .subtraction, firstValue: firstValue, secondValue: secondValue)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .subtraction, firstValue: firstValue, secondValue: secondValue)
         } else if segmentedControl.selectedSegmentIndex == 2 {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCaluclation: .multiplication, firstValue: firstValue, secondValue: secondValue)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .multiplication, firstValue: firstValue, secondValue: secondValue)
         } else {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCaluclation: .division, firstValue: firstValue, secondValue: secondValue)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .division, firstValue: firstValue, secondValue: secondValue)
         }
     }
     @IBOutlet private weak var calculationResultLabel: UILabel!

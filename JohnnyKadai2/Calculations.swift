@@ -8,17 +8,17 @@
 import Foundation
 
 struct Calculations {
-    enum TypeOfCaluclation {
+    enum TypeOfCalculation {
         case addition
         case subtraction
         case multiplication
         case division
     }
 
-    static func fetchCalculationResult(typeOfCaluclation: TypeOfCaluclation, firstValue: Float, secondValue: Float) -> String {
+    static func fetchCalculationResult(typeOfCalculation: TypeOfCalculation, firstValue: Float, secondValue: Float) -> String {
         let sum: String
 
-        switch typeOfCaluclation {
+        switch typeOfCalculation {
         case .addition:
             sum = String(firstValue + secondValue)
 
