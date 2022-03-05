@@ -8,7 +8,7 @@
 import UIKit
 
 extension UITextField {
-    var textToInt: Int {
-        text.flatMap { Int($0) } ?? 0
+    var textToFloat: Float {
+        text.flatMap { Float($0) } ?? 0
     }
 }
