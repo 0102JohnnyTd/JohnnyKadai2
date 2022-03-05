@@ -18,44 +18,18 @@ final class ViewController: UIViewController {
     }
 
     @IBAction private func caluclateButton(_ sender: Any) {
+        let firstValue = firstValueTextField.textToFloat
+        let secondValue = secondValueTextField.textToFloat
+
         if segmentedControl.selectedSegmentIndex == 0 {
-            fetchCalculationResult(typeOfCaluclation: .addition)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCaluclation: .addition, firstValue: firstValue, secondValue: secondValue)
         } else if segmentedControl.selectedSegmentIndex == 1 {
-            fetchCalculationResult(typeOfCaluclation: .subtraction)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCaluclation: .subtraction, firstValue: firstValue, secondValue: secondValue)
         } else if segmentedControl.selectedSegmentIndex == 2 {
-            fetchCalculationResult(typeOfCaluclation: .multiplication)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCaluclation: .multiplication, firstValue: firstValue, secondValue: secondValue)
         } else {
-            fetchCalculationResult(typeOfCaluclation: .division)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCaluclation: .division, firstValue: firstValue, secondValue: secondValue)
         }
     }
     @IBOutlet private weak var calculationResultLabel: UILabel!
-
-    private func fetchCalculationResult(typeOfCaluclation: TypeOfCaluclation) {
-        let firstValue = firstValueTextField.textToInt
-        let secondValue = secondValueTextField.textToInt
-
-        switch typeOfCaluclation {
-        case .addition:
-            calculationResultLabel.text =  String(firstValue + secondValue)
-
-        case .subtraction:
-            calculationResultLabel.text = String(firstValue - secondValue)
-
-        case .multiplication:
-            calculationResultLabel.text = String(firstValue * secondValue)
-
-        case .division:
-            guard secondValue != 0 else {
-                return calculationResultLabel.text = "割る数には0以外を入力してください"
-            }
-            calculationResultLabel.text = String(firstValue / secondValue)
-        }
-    }
-
-    enum TypeOfCaluclation {
-        case addition
-        case subtraction
-        case multiplication
-        case division
-    }
 }
