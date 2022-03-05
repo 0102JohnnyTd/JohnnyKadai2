@@ -8,7 +8,6 @@
 import UIKit
 
 final class ViewController: UIViewController {
-
     @IBOutlet private weak var firstValueTextField: UITextField!
 
     @IBOutlet private weak var secondValueTextField: UITextField!
@@ -19,25 +18,44 @@ final class ViewController: UIViewController {
     }
 
     @IBAction private func caluclateButton(_ sender: Any) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            fetchCalculationResult(typeOfCaluclation: .addition)
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            fetchCalculationResult(typeOfCaluclation: .subtraction)
+        } else if segmentedControl.selectedSegmentIndex == 2 {
+            fetchCalculationResult(typeOfCaluclation: .multiplication)
+        } else {
+            fetchCalculationResult(typeOfCaluclation: .division)
+        }
+    }
+    @IBOutlet private weak var calculationResultLabel: UILabel!
+
+    private func fetchCalculationResult(typeOfCaluclation: TypeOfCaluclation) {
         let firstValue = firstValueTextField.textToInt
         let secondValue = secondValueTextField.textToInt
 
-        if segmentedControl.selectedSegmentIndex == 0 {
+        switch typeOfCaluclation {
+        case .addition:
             calculationResultLabel.text =  String(firstValue + secondValue)
-        } else if segmentedControl.selectedSegmentIndex == 1 {
+
+        case .subtraction:
             calculationResultLabel.text = String(firstValue - secondValue)
-        } else if segmentedControl.selectedSegmentIndex == 2 {
+
+        case .multiplication:
             calculationResultLabel.text = String(firstValue * secondValue)
-        } else {
-            if secondValue == 0 {
-                calculationResultLabel.text = "割る数には0以外を入力してください"
-            } else {
-                calculationResultLabel.text = String(firstValue / secondValue)
+
+        case .division:
+            guard secondValue != 0 else {
+                return calculationResultLabel.text = "割る数には0以外を入力してください"
             }
+            calculationResultLabel.text = String(firstValue / secondValue)
         }
     }
 
-    @IBOutlet private weak var calculationResultLabel: UILabel!
+    enum TypeOfCaluclation {
+        case addition
+        case subtraction
+        case multiplication
+        case division
+    }
 }
-
-
