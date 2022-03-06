@@ -18,15 +18,20 @@ final class ViewController: UIViewController {
         let firstValue = firstValueTextField.textToFloat
         let secondValue = secondValueTextField.textToFloat
 
-        if segmentedControl.selectedSegmentIndex == 0 {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .addition, firstValue, secondValue)
-        } else if segmentedControl.selectedSegmentIndex == 1 {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .subtraction, firstValue, secondValue)
-        } else if segmentedControl.selectedSegmentIndex == 2 {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .multiplication, firstValue, secondValue)
-        } else {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .division, firstValue, secondValue)
+        guard segmentedControl.selectedSegmentIndex != 0 else {
+            return calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .addition, firstValue, secondValue)
         }
+        guard segmentedControl.selectedSegmentIndex != 1 else {
+            return calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .subtraction, firstValue, secondValue)
+        }
+        guard segmentedControl.selectedSegmentIndex != 2 else {
+            return  calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .multiplication, firstValue, secondValue)
+        }
+        guard segmentedControl.selectedSegmentIndex != 3 else {
+            return calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .division, firstValue, secondValue)
+        }
+        return
     }
+
     @IBOutlet private weak var calculationResultLabel: UILabel!
 }
