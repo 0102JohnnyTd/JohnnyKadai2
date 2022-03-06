@@ -14,9 +14,6 @@ final class ViewController: UIViewController {
 
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
 
-    @IBAction private func valueChanged(_ sender: Any) {
-    }
-
     @IBAction private func caluclateButton(_ sender: Any) {
         let firstValue = firstValueTextField.textToFloat
         let secondValue = secondValueTextField.textToFloat

@@ -40,9 +40,6 @@
                                             <segment title="÷"/>
                                         </segments>
                                         <color key="selectedSegmentTintColor" name="AccentColor"/>
-                                        <connections>
-                                            <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="FJx-Kv-q1R"/>
-                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-SQ-MC0">
                                         <rect key="frame" x="0.0" y="174" width="382" height="38"/>
