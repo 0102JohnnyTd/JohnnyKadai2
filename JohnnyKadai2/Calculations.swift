@@ -15,7 +15,7 @@ struct Calculations {
         case division
     }
 
-    static func fetchCalculationResult(typeOfCalculation: TypeOfCalculation, firstValue: Float, secondValue: Float) -> String {
+    static func fetchCalculationResult(typeOfCalculation: TypeOfCalculation, _ firstValue: Float, _ secondValue: Float) -> String {
         let sum: String
 
         switch typeOfCalculation {

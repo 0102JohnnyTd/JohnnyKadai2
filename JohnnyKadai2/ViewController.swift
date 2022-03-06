@@ -19,14 +19,13 @@ final class ViewController: UIViewController {
         let secondValue = secondValueTextField.textToFloat
 
         if segmentedControl.selectedSegmentIndex == 0 {
-            // UILabelにfetchCalculation
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .addition, firstValue: firstValue, secondValue: secondValue)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .addition, firstValue, secondValue)
         } else if segmentedControl.selectedSegmentIndex == 1 {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .subtraction, firstValue: firstValue, secondValue: secondValue)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .subtraction, firstValue, secondValue)
         } else if segmentedControl.selectedSegmentIndex == 2 {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .multiplication, firstValue: firstValue, secondValue: secondValue)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .multiplication, firstValue, secondValue)
         } else {
-            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .division, firstValue: firstValue, secondValue: secondValue)
+            calculationResultLabel.text = Calculations.fetchCalculationResult(typeOfCalculation: .division, firstValue, secondValue)
         }
     }
     @IBOutlet private weak var calculationResultLabel: UILabel!
