@@ -18,19 +18,22 @@ final class ViewController: UIViewController {
         let firstValue = firstValueTextField.textToFloat
         let secondValue = secondValueTextField.textToFloat
 
-        guard segmentedControl.selectedSegmentIndex != 0 else {
-            return calculationResultLabel.text = FetchCalculations.fetchCalculationResult(typeOfCalculation: .addition, firstValue, secondValue)
+        let typeOfCalculation: FetchCalculations.TypeOfCalculation
+
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            typeOfCalculation = .addition
+        case 1:
+            typeOfCalculation = .subtraction
+        case 2:
+            typeOfCalculation = .multiplication
+        case 3:
+            typeOfCalculation = .division
+        default:
+            fatalError("selectedSegmentIndexが異常")
         }
-        guard segmentedControl.selectedSegmentIndex != 1 else {
-            return calculationResultLabel.text = FetchCalculations.fetchCalculationResult(typeOfCalculation: .subtraction, firstValue, secondValue)
-        }
-        guard segmentedControl.selectedSegmentIndex != 2 else {
-            return  calculationResultLabel.text = FetchCalculations.fetchCalculationResult(typeOfCalculation: .multiplication, firstValue, secondValue)
-        }
-        guard segmentedControl.selectedSegmentIndex != 3 else {
-            return calculationResultLabel.text = FetchCalculations.fetchCalculationResult(typeOfCalculation: .division, firstValue, secondValue)
-        }
-        return
+
+        calculationResultLabel.text = FetchCalculations.fetchCalculationResult(typeOfCalculation: typeOfCalculation, firstValue, secondValue)
     }
 
     @IBOutlet private weak var calculationResultLabel: UILabel!
