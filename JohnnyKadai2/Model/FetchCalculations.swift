@@ -29,7 +29,7 @@ struct FetchCalculations {
             sum = String(firstValue * secondValue)
 
         case .division:
-            guard secondValue != 0 else {
+            guard !secondValue.isZero else {
                 return "割る数には0以外を入力してください"
             }
             sum = String(firstValue / secondValue)
