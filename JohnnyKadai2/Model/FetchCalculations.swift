@@ -8,7 +8,7 @@
 import Foundation
 
 struct FetchCalculations {
-    enum TypeOfCalculation {
+    enum TypeOfCalculation: Int {
         case addition
         case subtraction
         case multiplication
