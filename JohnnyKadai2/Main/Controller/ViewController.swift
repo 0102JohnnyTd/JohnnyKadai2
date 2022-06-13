@@ -18,12 +18,20 @@ final class ViewController: UIViewController {
         let firstValue = firstValueTextField.textToFloat
         let secondValue = secondValueTextField.textToFloat
 
-        guard let typeOfCalculation = FetchCalculations.TypeOfCalculation(rawValue: segmentedControl.selectedSegmentIndex) else {
-            fatalError("エラーが発生しました")
+        let calculationArray = [String(firstValue + secondValue),
+                                String(firstValue - secondValue),
+                                String(firstValue * secondValue),
+                                divisionValue(firstValue: firstValue, secondValue: secondValue)
+        ]
+
+        calculationResultLabel.text = calculationArray[segmentedControl.selectedSegmentIndex]
+    }
+
+    private func divisionValue(firstValue: Float, secondValue: Float) -> String {
+        guard !secondValue.isZero else {
+            return "割る数には0以外を入力してください"
         }
-        // 引数の値のtypeOfCalculationには上記のsegmentedControlに該当するtypeが入る。
-        // よってfetchCalculationResult()の呼び出しが一度で済む
-        calculationResultLabel.text = FetchCalculations.fetchCalculationResult(typeOfCalculation: typeOfCalculation, firstValue, secondValue)
+        return String(firstValue / secondValue)
     }
 
     @IBOutlet private weak var calculationResultLabel: UILabel!
